@@ -1,0 +1,93 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+
+.button {
+    display: inline-flex ; 
+    align-items: center;
+    gap: 8px;
+    color: #000 ;
+    border: 1px solid #000;
+    box-shadow: #517ea6 0px 0px 0px 0px inset;
+    padding: 10px 17px;
+    text-align: center;
+    transition: box-shadow 500ms cubic-bezier(0.39, 0.5, 0.15, 1.36), color 500ms cubic-bezier(0.39, 0.5, 0.15, 1.36);
+    margin-left: 9px;
+}
+
+    .button svg {
+        height: 21px;
+        width: auto;
+        transition: fill 500ms cubic-bezier(0.39, 0.5, 0.15, 1.36);
+    }
+
+    .button:hover svg {
+        text-decoration: none;
+        fill: #fff;
+    }
+
+    .button:hover {
+        text-decoration: none;
+        box-shadow: #000 0px 0px 700px inset;
+        color: #fff !important;
+    }
+
+    .button a {
+        text-decoration:none;
+    }
+
+    a{
+        text-decoration:none;
+        color: #000;
+    }
+
+    a:hover{
+        color: #fff;
+    }
+
+.pure-table {
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 800px; /* Example max-width */
+    margin: 0 auto; /* Center the table */
+}
+
+    .pure-table th,
+    .pure-table td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+    }
+
+    .pure-table tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+
+    .pure-table tr:hover {
+        background-color: #ddd;
+    }
+
+    .pure-table th {
+        background-color: #f2f2f2;
+        color: black;
+    }

@@ -1,0 +1,58 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<style>
+    /* Your table CSS styles */
+    .pure-table {
+        border-collapse: collapse;
+        width: 100%;
+        max-width: 800px; /* Example max-width */
+        margin: 0 auto; /* Center the table */
+    }
+
+        .pure-table th,
+        .pure-table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        .pure-table tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        .pure-table tr:hover {
+            background-color: #ddd;
+        }
+
+        .pure-table th {
+            background-color: #f2f2f2;
+            color: black;
+        }
+</style>
+@model List<Entertainer>
+
+
+<table class="pure-table pure-table-bordered">
+    <thead class="fw-bold">
+        <tr>
+            <td>Stage Name</td>
+        </tr>
+    </thead>
+    @foreach(var x in Model)
+    {
+        <tbody>
+            <tr>
+                <td>@x.EntStageName</td>
+                <td><a asp-controller='Home' asp-action="Details" asp-route-EntertainerID="@x.EntertainerId">Details</a></td>
+            </tr>
+        </tbody>
+    }
+
+</table>
+<div class="button">
+    <a asp-controller="Home" asp-action="form">Enter an entertainer</a>
+</div>

@@ -1,0 +1,64 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model Entertainer
+
+<h2> Create or Edit an entertainer record</h2>@*  form to add or edit a record. It grabs by the column name and uses post method to add to the database via home controller
+ *@
+<form method="post">
+    <input type="hidden" asp-for="EntertainerId"/>@*  SELECTING THE ENTERTAINERID TO ADD OR EDIT *@
+    <div>
+        <label asp-for="EntStageName">Stage Name</label>
+        <input asp-for="EntStageName" class="form-control" required/>
+        <span asp-validation-for="EntStageName" class="text-danger"></span>
+    </div>
+
+    <div>
+        <label asp-for="EntSsn">SSN: </label> @* grab ssn *@
+        <input asp-for="EntSsn" class="form-control" required/>
+        <span asp-validation-for="EntStageName" class="text-danger"></span>
+    </div>
+    <div>
+        <label asp-for="EntStreetAddress">Street Addres: </label> @* grabbin input for street address *@
+        <input asp-for="EntStreetAddress" class="form-control" required />
+        <span asp-validation-for="EntStreetAddress" class="text-danger"></span>
+    </div>
+    <div>
+        <label asp-for="EntCity">City: </label> @*  label for city *@
+        <input asp-for="EntCity" class="form-control" required />
+        <span asp-validation-for="EntCity" class="text-danger"></span>
+    </div>
+    <div>
+        <label asp-for="EntState">State: </label> @* Entering sstate info *@
+        <input asp-for="EntState" class="form-control" required />
+        <span asp-validation-for="EntState" class="text-danger"></span>
+    </div>
+    <div>
+        <label asp-for="EntZipCode">ZIP Code: </label> @* zip code enter *@
+        <input asp-for="EntZipCode" class="form-control" required />
+        <span asp-validation-for="EntZipCode" class="text-danger"></span>
+    </div>
+    <div>
+        <label asp-for="EntPhoneNumber">Phone Number: </label>@*  form section for phone number *@
+        <input asp-for="EntPhoneNumber" class="form-control" required />
+        <span asp-validation-for="EntPhoneNumber" class="text-danger"></span>
+    </div>
+    <div>
+        <label asp-for="EntWebPage">Website: </label> @* Website url being entered *@
+        <input asp-for="EntWebPage" class="form-control" required />
+        <span asp-validation-for="EntWebPage" class="text-danger"></span>
+    </div>
+    <div>
+        <label asp-for="EntEmailAddress">Email Address: </label>@*  section to enter entertainers email address *@
+        <input asp-for="EntEmailAddress" class="form-control" required />
+        <span asp-validation-for="EntEmailAddress" class="text-danger"></span>
+    </div>
+    <div>
+        <label asp-for="DateEntered">Date Entered: </label>@*  the date the entertainer recrod was entererrd *@
+        <input asp-for="DateEntered" class="form-control" required />
+        <span asp-validation-for="DateEntered" class="text-danger"></span>
+    </div>
+    <button type="submit">Submit</button>
+</form>
